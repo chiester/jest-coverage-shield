@@ -1,7 +1,7 @@
 {
-  "name": "coverage-badger",
+  "name": "jest-coverage-badge",
   "version": "1.0.1",
-  "description": "Coverage report badger tool.",
+  "description": "Auto creates jest coverage badge",
   "keywords": [
     "coverage",
     "unit test",
@@ -10,29 +10,37 @@
     "clover"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/notnotse/coverage-badger",
+  "homepage": "https://github.com/patrick-lai/coverage-badger",
   "bugs": {
-    "url": "https://github.com/notnotse/coverage-badger/issues"
+    "url": "https://github.com/patrick-lai/coverage-badger/issues"
   },
+  "files": [
+    "lib"
+  ],
   "author": {
-    "name": "Not Not Consulting",
-    "email": "info@notnto.se",
-    "url": "https://github.com/notnotse"
+    "name": "Patrick Lai",
+    "url": "https://github.com/patrick-lai"
   },
-  "contributors": ["jhillacre"],
+  "contributors": [
+    "jhillacre",
+    "patrick-lai"
+  ],
   "main": "./lib/index.js",
   "bin": {
     "coverage-badger": "./lib/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:notnotse/coverage-badger.git"
+    "url": "git@github.com:patrick-lai/coverage-badger.git"
   },
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report text -- -R spec"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report text -- -R spec",
+    "make-badge": "node ./lib/cli -s flat-square -d badges/"
   },
   "dependencies": {
     "commander": "^2.8.1",
+    "decode-html": "^2.0.0",
+    "lodash": "^4.17.10",
     "xml-splitter": "~1.2.1",
     "xtend": "~4.0.1"
   },
