@@ -1,6 +1,6 @@
 {
   "name": "jest-coverage-shield",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto creates jest coverage shield from shield.io",
   "keywords": [
     "coverage",
