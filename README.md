@@ -1,6 +1,6 @@
 # coverage-badger
 
-This is a fork of [coverage-badger](https://github.com/notnotse/coverage-badger). This is much faster but more locked down method that leverages off pre-downloaded `svgs` instead of downloading from `shield.io` every time.
+This is a fork of [coverage-badger](https://github.com/notnotse/coverage-badger). This is much faster but more locked down method that leverages off pre-downloaded `svgs` instead of downloading from `shield.io` every time. Also fixes some bugs.
 
 ![coverage](./shields/coverage.svg)
 
