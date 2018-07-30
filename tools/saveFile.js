@@ -16,7 +16,10 @@ module.exports = saveAtPath => (buffer, newPercent) =>
     ensureDirectoryExistence(saveAtPath);
     fs.writeFile(saveAtPath, buffer, err => {
       if (err) reject(err);
-      console.info(`Successfully created badge`);
-      if (newPercent) console.info(`Overall coverage: ${newPercent}%`);
+      if (newPercent) {
+        console.log(`Successfully created badge for ${newPercent}% coverage`);
+      } else {
+        console.log(`Successfully created badge`);
+      }
     });
   });

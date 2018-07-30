@@ -1,6 +1,6 @@
 {
   "name": "jest-coverage-shield",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Auto creates jest coverage shield from shield.io",
   "keywords": [
     "coverage",
@@ -36,16 +36,12 @@
   },
   "scripts": {
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report text -- -R spec",
-    "shield": "node ./lib/cli -s flat-square -d shields/"
+    "shield": "node ./lib/cli",
+    "refresh": "node ./tools/refresh"
   },
   "dependencies": {
     "commander": "^2.8.1",
-    "decode-html": "^2.0.0",
-    "lodash": "^4.17.10",
-    "svg.js": "^2.6.5",
-    "svgdom": "0.0.15",
-    "xml-splitter": "~1.2.1",
-    "xtend": "~4.0.1"
+    "xml-splitter": "~1.2.1"
   },
   "devDependencies": {
     "chai": "^3.2.0",

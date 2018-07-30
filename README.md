@@ -1,14 +1,14 @@
 # coverage-badger
 
-This is a fork of [coverage-badger](https://github.com/notnotse/coverage-badger). Its quite slow to download from `shield.io` Every single time. So if there is no change to the size/color of the badge. We will just modify the %age instead. Also opens up the `shieldStyle` flag.
+This is a fork of [coverage-badger](https://github.com/notnotse/coverage-badger). This is much faster but more locked down method that leverages off pre-downloaded `svgs` instead of downloading from `shield.io` every time.
 
 ![coverage](./shields/coverage.svg)
 
 Creates a coverage badge by reading the Clover XML coverage report using https://github.com/badges/shields.
 
 * The badge displays appropriate colors for the badge.
-* Green: >= 80% overall coverage
-* Yellow: 65% <= overall coverage < 80%
+* Green: >= 90% overall coverage
+* Yellow: 65% <= overall coverage < 90%
 * Red: < 65% overall coverage
 
 # Installation
@@ -25,8 +25,7 @@ Example:
 
 ```
 "scripts": {
-  "test": "jest && npm run coverage-shield"
-  "coverage-shield": "coverage-shield -r coverage/clover.xml -d shields/",
+  "test": "jest && coverage-shield"
 }
 ```
 
@@ -47,13 +46,11 @@ $ ./node_modules/jest-coverage-shield/lib/cli.js
 
     -h, --help                          output usage information
     -V, --version                       output the version number
-    -f, --defaults                      Use the default values for all the input.
     -e, --excellentThreshold <n>        The threshold for green badges, where coverage >= -e
     -g, --goodThreshold <n>             The threshold for yellow badges, where -g <= coverage < -e
     -b, --badgeFileName <badge>         The badge file name that will be saved.
     -r, --reportFile <report>           The Clover XML file path.
     -d, --destinationDir <destination>  The directory where 'coverage.svg' will be generated at.
-    -s, --shieldStyle <style>           The badge style check shields.io for more info
   Examples:
 
     $ coverage-badger -e 90 -g 65 -r coverage/clover.xml -d coverage/
