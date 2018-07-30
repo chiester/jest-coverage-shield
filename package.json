@@ -11,9 +11,9 @@
     "jest"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/patrick-lai/coverage-badger",
+  "homepage": "https://github.com/patrick-lai/jest-coverage-shield",
   "bugs": {
-    "url": "https://github.com/patrick-lai/coverage-badger/issues"
+    "url": "https://github.com/patrick-lai/jest-coverage-shield/issues"
   },
   "files": [
     "lib"
@@ -28,15 +28,15 @@
   ],
   "main": "./lib/index.js",
   "bin": {
-    "coverage-badger": "./lib/cli.js"
+    "coverage-shield": "./lib/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:patrick-lai/coverage-badger.git"
+    "url": "git@github.com:patrick-lai/jest-coverage-shield.git"
   },
   "scripts": {
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report text -- -R spec",
-    "badge": "node ./lib/cli -s flat-square -d badges/"
+    "shield": "node ./lib/cli -s flat-square -d shields/"
   },
   "dependencies": {
     "commander": "^2.8.1",

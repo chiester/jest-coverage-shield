@@ -2,7 +2,7 @@
 
 This is a fork of [coverage-badger](https://github.com/notnotse/coverage-badger). Its quite slow to download from `shield.io` Every single time. So if there is no change to the size/color of the badge. We will just modify the %age instead. Also opens up the `shieldStyle` flag.
 
-![coverage](./badges/coverage.svg)
+![coverage](./shields/coverage.svg)
 
 Creates a coverage badge by reading the Clover XML coverage report using https://github.com/badges/shields.
 
