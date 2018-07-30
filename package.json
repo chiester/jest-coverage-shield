@@ -1,6 +1,6 @@
 {
   "name": "jest-coverage-shield",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Auto creates jest coverage shield from shield.io",
   "keywords": [
     "coverage",
@@ -36,7 +36,7 @@
   },
   "scripts": {
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report text -- -R spec",
-    "make-badge": "node ./lib/cli -s flat-square -d badges/"
+    "badge": "node ./lib/cli -s flat-square -d badges/"
   },
   "dependencies": {
     "commander": "^2.8.1",
