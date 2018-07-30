@@ -14,7 +14,7 @@ Creates a coverage badge by reading the Clover XML coverage report using https:/
 # Installation
 
 ```
-npm install --save-dev coverage-badger
+npm install --save-dev jest-coverage-shield
 ```
 
 # NPM Script
@@ -25,8 +25,8 @@ Example:
 
 ```
 "scripts": {
-  "coverage-badge": "coverage-badger -r coverage/clover.xml -d coverage/",
-  "coverage": "npm test -- --coverage && npm run coverage-badge"
+  "test": "jest && npm run coverage-shield"
+  "coverage-shield": "coverage-shield -r coverage/clover.xml -d shields/",
 }
 ```
 
@@ -37,7 +37,7 @@ You can now use the CLI to create the badge for a XML Clover report.
 The CLI prints the following help:
 
 ```
-$ ./node_modules/coverage-badger/lib/cli.js
+$ ./node_modules/jest-coverage-shield/lib/cli.js
 
   Usage: cli [options]
 
